@@ -1,0 +1,21 @@
+.button{
+    border: none;
+    outline: none;
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+    }
+    
+    transition: all 0.2s ease-in-out;
+    &.primary-button{
+        background-color: #f8006b;
+        color: #ffffff;
+    }
+    &.active-button{
+        transform: scale(1.1);
+    }
+
+}
