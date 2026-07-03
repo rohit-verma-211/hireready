@@ -1,97 +1,60 @@
 import React from 'react'
-import {useState} from 'react'
-import '../auth.form.scss'
-import {useNavigate,Link} from 'react-router'
-import {useAuth} from '../hooks/useAuth.js'
-
-
-
+import { useState } from 'react'
+import { useNavigate, Link } from 'react-router'
+import { useAuth } from '../hooks/useAuth.js'
 
 export const Login = () => {
-    const navigate = useNavigate();
-    const {loading, handleLogin} = useAuth();
+  const navigate = useNavigate();
+  const { loading, handleLogin } = useAuth();
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        await handleLogin({email, password});
-        navigate('/');
-    }
-    if(loading) return <main
-    style={{
-      height: "100vh",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "#ffffff",
-    }}
-  >
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "16px",
-      }}
-    >
-      <div
-        style={{
-          width: "50px",
-          height: "50px",
-          border: "5px solid #e5e5e5",
-          borderTop: "5px solid #f8006b",
-          borderRadius: "50%",
-          animation: "spin 1s linear infinite",
-        }}
-      ></div>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await handleLogin({ email, password });
+    navigate('/');
+  }
 
-      <h3
-        style={{
-          margin: 0,
-          fontFamily: "sans-serif",
-          color: "#333",
-        }}
-      >
-        Loading...
-      </h3>
-    </div>
-
-    <style>
-      {`
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      `}
-    </style>
-  </main>
-
+  if (loading) return (
+    <main className="h-screen flex justify-center items-center bg-white">
+      <div className="flex flex-col items-center gap-4">
+        <div className="w-[50px] h-[50px] border-[5px] border-gray-200 border-t-pink-600 rounded-full animate-spin"></div>
+        <h3 className="m-0 font-sans text-gray-800">Loading...</h3>
+      </div>
+    </main>
+  )
 
   return (
-    <main>
-        <div className="form-container">
-            <h1>Login</h1>
-            <form onSubmit={handleSubmit}   >
-                <div className="input-group">
-                    <label htmlFor="email">Email:</label>
-                    <input onChange={(e) => setEmail(e.target.value)}
-                    type="email" id="email" name="email" placeholder="Enter your email" />
-                </div>
-                <div className="input-group">
-                    <label htmlFor="password">Password:</label>
-                    <input onChange={(e) => setPassword(e.target.value)}
-                    type="password" id="password" name="password" placeholder="Enter your password" />
-                </div>
-                <button className="button primary-button">Login</button>
-            </form>
-            <p>Don't have an account? <Link to="/register">Register</Link>  </p>
-        </div>
+    <main className="min-h-screen w-full flex items-center justify-center p-4 bg-[url('https://images.unsplash.com/photo-1746003288323-89dba68721f6?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+      <div className="w-full max-w-md rounded-[32px] bg-white/30 backdrop-blur-xl border border-white/40 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)] p-12">
+        <h1 className="text-center text-3xl font-bold text-gray-900 mb-10 tracking-tight">Login</h1>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6 px-4">
+          <div className="flex flex-col gap-2">
+            <label htmlFor="email" className="text-sm font-semibold text-gray-800">Email:</label>
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full rounded-full border border-gray-300/70 bg-white/40 backdrop-blur-sm px-5 py-3 text-gray-900 placeholder:text-gray-400 outline-none focus:border-gray-900 focus:bg-white/60 transition-all"
+              type="email" id="email" name="email" placeholder="Enter your email"
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="password" className="text-sm font-semibold text-gray-800">Password:</label>
+            <input
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full rounded-full border border-gray-300/70 bg-white/40 backdrop-blur-sm px-5 py-3 text-gray-900 placeholder:text-gray-400 outline-none focus:border-gray-900 focus:bg-white/60 transition-all"
+              type="password" id="password" name="password" placeholder="Enter your password"
+            />
+          </div>
+          <button className="mt-4 w-full rounded-full bg-gray-900 hover:bg-black text-white font-medium py-3.5 shadow-lg shadow-gray-900/20 transition-all active:scale-[0.98] cursor-pointer">
+            Login
+          </button>
+        </form>
+        <p className="mt-8 text-center text-sm text-gray-700 px-4">
+          Don't have an account?{' '}
+          <Link to="/register" className="font-semibold text-gray-900 underline underline-offset-2 hover:text-black">Register</Link>
+        </p>
+      </div>
     </main>
   )
 }

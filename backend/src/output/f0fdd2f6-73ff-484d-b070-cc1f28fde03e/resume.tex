@@ -1,0 +1,256 @@
+%------------------------
+% Resume Template
+% Author : Rohit Verma
+
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{0.45in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{\LARGE Rohit Verma} &
+ \href{mailto:rohit.dtu.ac.in@gmail.com}{rohit.dtu.ac.in@gmail.com} \\
+&  \\
+\end{tabular*}
+\vspace{-12pt}
+
+
+%-----------EDUCATION-----------------
+\section{~~Education}
+\resumeSubHeadingListStart
+
+
+\resumeSubheading
+{Delhi Technological University}
+{Delhi, India}
+{B.Tech, Electrical Engineering; CGPA: 8.72}
+{2024-Present}
+
+
+\resumeSubheading
+{CBSE Board}
+{India}
+{Senior Secondary; CGPA: 90\%}
+{2023}
+
+
+\resumeSubheading
+{CBSE Board}
+{India}
+{Secondary; CGPA: 92.2\%}
+{2021}
+
+
+\resumeSubHeadingListEnd
+
+%-----------------SKILLS-----------------
+\vspace{-5pt}
+\section{Skills Summary}
+\resumeSubHeadingListStart
+
+
+\resumeSubItem{Languages}{~~~~~~Python, C++, C, Java, JavaScript, MATLAB
+}
+\resumeSubItem{Frameworks}{~~~~React.js, Node.js, Express.js, TailwindCSS
+}
+\resumeSubItem{Tools}{~~~~~~~~~~~~Git, GitHub, Visual Studio Code, Docker, Puppeteer, Figma
+}
+\resumeSubItem{Platforms}{~~~~~~~MongoDB, MySQL, Google Cloud, Azure DevOps
+}
+\resumeSubItem{Soft Skills}{~~~~~~~Communication, Teamwork, Leadership, Problem-solving, Agile Methodologies
+}
+
+
+\resumeSubHeadingListEnd
+
+%------------EXPERIENCE-----------------
+\vspace{-5pt}
+\section{Experience}
+\resumeSubHeadingListStart
+
+
+\resumeSubheading
+{Infosys SpringBoard 7.0 Virtual Internship}
+{Delhi, India}
+{Python Developer Intern}
+{June 2026-Present}
+
+\resumeItemListStart
+\item Engineered a full-stack Global IP Intelligence Platform for patent and trademark monitoring.
+\item Delivered end-to-end full-stack features within an Agile development environment.
+\item Architected robust data flow and API integration pipelines for responsive front-end interfaces.
+\resumeItemListEnd
+
+\vspace{-5pt}
+
+
+\resumeSubheading
+{EliteBrokedge Securities}
+{Delhi, India}
+{Web Developer Intern}
+{Jan 2025-Apr 2025}
+
+\resumeItemListStart
+\item Designed and deployed a MERN-stack application featuring responsive interfaces and RESTful APIs.
+\item Collaborated with a 5-member team to enhance website functionality and user experience (UX).
+\item Optimized application performance, reducing page load time by 25\% and improving user retention by 15\%.
+\resumeItemListEnd
+
+\vspace{-5pt}
+
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\vspace{-5pt}
+\section{Projects}
+\resumeSubHeadingListStart
+
+
+\resumeSubheading
+{FundMyStudy: Smart Scholarship Recommendation System}
+{}
+{Tech: React.js, TailwindCSS, Node.js, Express.js, MongoDB, GoogleOAuth, ClaudeAPI}
+{}
+
+\resumeItemListStart
+\item Developed an AI-powered full-stack platform recommending 500+ scholarships based on eligibility criteria.
+\item Configured two recommendation engines achieving 90\%+ accuracy via Node.js/Express.js RESTful APIs.
+\item Automated scholarship discovery, reducing manual search effort by 80\% and improving access.
+\resumeItemListEnd
+
+\vspace{-5pt}
+
+
+\resumeSubheading
+{HireReady: AI-Powered Resume Preparation Platform}
+{}
+{Tech: React.js, Node.js, Express.js, MongoDB, JWT, GeminiAPI, Puppeteer}
+{}
+
+\resumeItemListStart
+\item Built a GenAI web application, integrating Gemini AI for ATS-optimized resume generation.
+\item Engineered 8+ secure RESTful API endpoints using Node.js/Express.js with JWT authentication.
+\item Implemented an AI-to-PDF pipeline using Puppeteer for ATS-compatible resume generation.
+\resumeItemListEnd
+
+\vspace{-5pt}
+
+
+\resumeSubHeadingListEnd
+
+%-----------Certifications-----------------
+\vspace{-5pt}
+\section{Certifications}
+\resumeItemListStart
+
+
+
+\resumeItemListEnd
+
+%-----------Achievements-----------------
+\vspace{-5pt}
+\section{Achievements}
+\resumeItemListStart
+
+\item Selected among top students nationwide for the prestigious Aspire Leader Program, USA (2025).
+\item Awarded the MEXT Scholarship (2025) by the Government of Japan for outstanding academic excellence.
+\item Achieved 1st Rank in the Data Structures and Algorithms (DSA) Quiz organized by SkillOp Society, DTU.
+\item Successfully solved 500+ Data Structures and Algorithms problems on LeetCode and GeeksForGeeks.
+
+\resumeItemListEnd
+
+%-----------Positions of Responsibility + Extra-----------
+\vspace{-5pt}
+\section{Positions of Responsibility}
+\resumeSubHeadingListStart
+
+
+\resumeSubheading
+{Co-Head}
+{}
+{SkillOp, DTU}
+{Aug 2024-Present}
+
+\resumeItemListStart
+\item Led and managed initiatives for SkillOp Society, fostering technical skill development.
+\item Organized and oversaw technical events, including the 1st-ranked DSA Quiz.
+\resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+
+
+
+\end{document}

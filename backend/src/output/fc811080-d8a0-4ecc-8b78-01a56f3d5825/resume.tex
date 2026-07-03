@@ -1,0 +1,185 @@
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+\usepackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+\usepackage{fontawesome5}
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\newcommand{\name}{Rohit Verma}
+\newcommand{\emaila}{rohit.dtu.ac.in@gmail.com}
+\newcommand{\linkedin}{\href{https://linkedin.com/in/rohit-verma-211rv}{LinkedIn}}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{\name}\\[7.5pt]
+
+\linkedin \ $|$ \
+\href{mailto:\emaila}{\raisebox{-0.05\height}\faEnvelope\ \emaila}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+{{EXPERIENCE_SECTION}}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+
+\begin{joblong}{FundMyStudy: Smart Scholarship Recommendation System (React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Google OAuth, ClaudeAPI)}{}
+\item Developed an AI-powered full-stack platform recommending 500+ scholarships based on comprehensive eligibility analysis.
+\item Engineered two recommendation engines with 90\%+ accuracy using Node.js/Express.js RESTful APIs for personalized scores.
+\item Automated scholarship discovery workflows, reducing manual search effort by 80\% and enhancing student access to funding.
+\end{joblong}
+\vspace{3pt}
+
+
+\begin{joblong}{HireReady: AI-Powered Resume Preparation Platform (React.js, Node.js, Express.js, MongoDB, JWT, Gemini API, Puppeteer)}{}
+\item Built and deployed a full-stack Gen AI web application, integrating Gemini AI for ATS-optimized resume generation, reducing manual effort by 70\%.
+\item Engineered 8+ secure RESTful API endpoints using Node.js/Express.js with JWT authentication and token blacklisting.
+\item Implemented an AI-to-PDF pipeline using Puppeteer for structured, ATS-compatible resume generation.
+\end{joblong}
+\vspace{3pt}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+
+\begin{jobshort}{Delhi Technological University}{2024 - Present}
+\end{jobshort}
+B.Tech, Electrical Engineering \hfill CGPA: 8.72\\[6pt]
+
+
+\begin{jobshort}{CBSE}{2023}
+\end{jobshort}
+Senior Secondary \hfill CGPA: 90\\[6pt]
+
+
+\begin{jobshort}{CBSE}{2021}
+\end{jobshort}
+Secondary \hfill CGPA: 92.2\\[6pt]
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+
+\textbf{Languages:} Python, C++, C, Java, JavaScript, MATLAB \\[4pt]
+\textbf{Frameworks:} React.js, Tailwind CSS, Node.js, Express.js \\[4pt]
+\textbf{Tools:} Git, GitHub, Visual Studio Code, Docker, Puppeteer, Figma \\[4pt]
+\textbf{Platforms:} MongoDB, MySQL, Google Cloud, Azure DevOps, Google OAuth, ClaudeAPI, Gemini API \\[4pt]
+\textbf{Soft Skills:} Leadership, Teamwork, Communication, Problem-Solving, Agile Development, Project Management, Networking, Strategic Planning \\[4pt]
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS / ACHIEVEMENTS / POSITIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item The Complete Full-Stack Web Development Bootcamp (Udemy, )
+\item Dynamic Programming Camp (AlgoUniversity, )
+\item Mastering Git \& GitHub (Microsoft Learn, )
+\end{itemize}
+
+\section{Achievements}
+
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item Selected for the prestigious Aspire Leader Program, USA (2025), recognizing top students nationwide.
+\item Awarded the MEXT Scholarship’25 by the Government of Japan for demonstrated academic excellence.
+\item Achieved 1st Rank in the DSA Quiz organized by SkillOp Society, DTU.
+\item Solved over 500 Data Structures and Algorithms (DSA) problems on Leetcode and GeeksForGeeks.
+\end{itemize}
+
+\section{Positions of Responsibility}
+
+
+\begin{joblong}{Co-Head, SkillOp, DTU}{Aug 2024 - Present}
+\item Spearheaded 10+ successful events, including Techweek and Annual Hackathon, collaborating with a 90-member team.
+\item Managed logistics and cross-team coordination for large-scale events, contributing to 30\% growth.
+\end{joblong}
+\vspace{3pt}
+
+
+
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}

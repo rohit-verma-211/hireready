@@ -5,6 +5,7 @@ import { GoogleGenAI } from "@google/genai";
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 
+
 console.log("GOOGLE_API_KEY =", process.env.GOOGLE_API_KEY);
 
 const ai = new GoogleGenAI({
@@ -173,6 +174,7 @@ DO NOT wrap the JSON inside \`\`\`.
 Return EXACTLY this structure:
 
 {
+  "title": "Interview Preparation Report",
   "matchScore": 85,
 
   "technicalQuestions": [
@@ -232,4 +234,6 @@ Return EXACTLY this structure:
     }
 }
 
-export default generateInterviewReport;
+
+
+export default generateInterviewReport ;

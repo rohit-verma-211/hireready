@@ -1,0 +1,333 @@
+%SOFTWARE.
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=0.6cm, top=0.5cm, right=0.6cm, bottom=0.5cm}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+
+\newcommand{\name}{Rohit Verma}
+\newcommand{\degree}{B.Tech, Electrical Engineering}
+\newcommand{\branch}{}
+\newcommand{\college}{Delhi Technological University}
+\newcommand{\emaila}{rohit.dtu.ac.in@gmail.com}
+\newcommand{\linkedin}{\href{https://LinkedIn}{LinkedIn}}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADING-----------------
+
+\parbox{\dimexpr\linewidth\relax}{
+\begin{tabularx}{\linewidth}{L r}
+
+\textbf{\LARGE \name} &
+\href{mailto:\emaila}{\emaila} \\
+
+\degree &
+\linkedin \\
+
+\branch & \\
+
+\end{tabularx}
+}
+
+\vspace{-0.5mm}
+
+%-----------EDUCATION-----------------
+\section{\textbf{Education}}
+\setlength{\tabcolsep}{5pt}
+
+\small{
+\begin{tabularx}
+{\dimexpr\textwidth-2mm\relax}{|c|C|c|c|}
+\hline
+\textbf{Year} &
+\textbf{Degree/Certificate} &
+\textbf{Institute} &
+\textbf{CGPA/Percentage} \\
+\hline
+
+2024-Present &
+B.Tech, Electrical Engineering &
+Delhi Technological University &
+8.72 \\
+\hline
+2023 &
+Senior Secondary &
+CBSE &
+90 \\
+\hline
+2021 &
+Secondary &
+CBSE &
+92.2 \\
+\hline
+
+\end{tabularx}
+}
+
+\vspace{-1mm}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+
+\resumeSubheading
+{Infosys SpringBoard 7.0 Virtual Internship}
+{Delhi, India}
+{Python Developer Intern}
+{June 2026-Present}
+
+\resumeItemListStart
+\item Developed a Global IP Intelligence Platform to monitor patent and trademark activity.
+\item Implemented full-stack features, ensuring end-to-end delivery in an Agile environment.
+\item Architected data flow and API integration pipelines for responsive frontend interfaces.
+\resumeItemListEnd
+
+\vspace{-5pt}
+
+
+\resumeSubheading
+{Elite Brokedge Securities}
+{Delhi, India}
+{Web Developer Intern}
+{Jan 2025-Apr 2025}
+
+\resumeItemListStart
+\item Designed and deployed a MERN-stack application with responsive interfaces and RESTful APIs.
+\item Collaborated with a 5-member team to enhance website functionality and user experience (UX).
+\item Optimized application performance, reducing page load time by 25\% and improving user retention by 15\%.
+\resumeItemListEnd
+
+\vspace{-5pt}
+
+  \resumeSubHeadingListEnd
+\vspace{-6.5mm}
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+\resumeProject
+{FundMyStudy: Smart Scholarship Recommendation System}
+{React.js, TailwindCSS, Node.js, Express.js, MongoDB, GoogleOAuth, ClaudeAPI}
+{}
+{}
+
+\resumeItemListStart
+\item Developed an AI-powered full-stack platform recommending 500+ scholarships based on eligibility.
+\item Configured 2 recommendation engines with 90\%+ accuracy using Node.js/Express.js RESTful APIs.
+\item Automated scholarship discovery, reducing manual search effort by 80\% and improving access.
+\resumeItemListEnd
+
+
+\resumeProject
+{HireReady: AI-Powered Resume Preparation Platform}
+{React.js, Node.js, Express.js, MongoDB, JWT, GeminiAPI, Puppeteer}
+{}
+{}
+
+\resumeItemListStart
+\item Built a GenAI web application, integrating GeminiAI for ATS-optimized resume generation.
+\item Engineered 8+ secure RESTful API endpoints using Node.js/Express.js with JWT authentication.
+\item Implemented an AI-to-PDF pipeline using Puppeteer for ATS-compatible resume generation.
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-7.5mm}
+
+%-----------TECHNICAL SKILLS-----------------
+\section{\textbf{Technical Skills}}
+\resumeHeadingSkillStart
+
+\resumeSubItem{Languages}{~~~~~~Python, C++, C, Java, JavaScript, MATLAB
+}
+\resumeSubItem{Frameworks}{~~~~React.js, Node.js, Express.js, TailwindCSS
+}
+\resumeSubItem{Tools}{~~~~~~~~~~~~Git, GitHub, VisualStudio Code, Docker, Puppeteer, Figma
+}
+\resumeSubItem{Platforms}{~~~~~~~MongoDB, MySQL, Google Cloud, Azure DevOps
+}
+\resumeSubItem{Soft Skills}{~~~~~~~Communication, Teamwork, Leadership, Problem-solving, Agile Methodologies
+}
+
+\resumeHeadingSkillEnd
+
+\vspace{-1.5mm}
+
+%-----------KEY COURSES-----------------
+\iffalse
+\section{\textbf{Key courses taken}}
+\resumeHeadingSkillStart
+ \resumeSubItem{CSE \& Maths}
+    {Introduction to C, Fundamentals of Computers, Object Oriented Paradigm in C++, Data Structures and Algorithms, Computer Organization \& Architecture, Python Programming, Operating System, Database Management System, Statistical Methods, Discrete Mathematics, Numerical Methods, Computer Networks \& Security, Software Engineering, Compiler Design, Computer Graphics \& Multimedia}
+ \resumeSubItem{Others}
+    {Basic Electronics \& Electrical Engineering, Engineering Drawing, Digital Electronics, Principle of Engineering Economics and Management, Microprocessor: Theory \& Applications}
+\resumeHeadingSkillEnd
+\fi
+
+\vspace{-1mm}
+
+%---------------CERTIFICATIONS-------------------
+\section{\textbf{Certifications}}
+    \resumeItemListStart
+\item  (, )
+\item  (, )
+\item  (, )
+    \resumeItemListEnd
+\vspace{-4mm}
+
+%-----------TRAINING (disabled)-----------------
+\iffalse
+\section{\textbf{Vocational Training}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Institution Name}{Location}
+      {Course Name}{Start Time-EndTime}
+      \resumeItemListStart
+        \item {About course, blah blah}
+        \item {About course, blah blah}
+      \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+\fi
+
+%-----------POSITIONS OF RESPONSIBILITY-----------------
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR
+{Co-Head}
+{SkillOp, DTU}
+{Aug 2024-Present}
+
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+%-----------ACHIEVEMENTS-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.1mm}
+\resumeItemListStart
+\item Selected among top students nationwide for the Aspire Leader Program, USA (2025).
+\item Awarded MEXT Scholarship (2025) by the Government of Japan for academic excellence.
+\item Secured 1st Rank in DSA Quiz organized by SkillOp Society, DTU.
+\item Solved 500+ Data Structures and Algorithms problems on LeetCode and GeeksForGeeks.
+\resumeItemListEnd
+
+%-----------EXTRA SECTIONS-----------------
+
+
+\end{document}

@@ -1,12 +1,13 @@
 import express from "express";
 import upload from "../middlewares/file.middleware.js";
 import authUser from "../middlewares/auth.middleware.js";
-// ✅ Fix:
+
 import {
     generateInterViewReportController,
     getInterviewReportByIdController,
     getAllInterviewReportsController,
 } from "../controllers/interview.controller.js";
+
 const interviewRouter = express.Router();
 
 interviewRouter.post(
@@ -16,11 +17,16 @@ interviewRouter.post(
     generateInterViewReportController
 );
 
+interviewRouter.get(
+    "/",
+    authUser,
+    getAllInterviewReportsController
+);
 
 interviewRouter.get(
-    "/:interviewId",
+    "/report/:interviewId",
     authUser,
-    generateInterViewReportController
+    getInterviewReportByIdController
 );
 
 export default interviewRouter;

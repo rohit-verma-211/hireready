@@ -5,6 +5,7 @@ import {
 } from "../services/interview.api.js";
 
 import { useContext } from "react";
+import { useEffect } from "react";
 import { InterviewContext } from "../interview.context.jsx";
 
 export const useInterview = () => {
@@ -49,6 +50,7 @@ export const useInterview = () => {
   };
 
   const getReportById = async (interviewId) => {
+    console.log("Fetching report for interviewId:", interviewId);
     setLoading(true);
 
     try {
@@ -73,6 +75,9 @@ export const useInterview = () => {
       setLoading(false);
     }
   };
+
+
+  
 
   return {
     loading,

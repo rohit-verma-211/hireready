@@ -1,0 +1,242 @@
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+\usepackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+\usepackage{fontawesome5}
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\newcommand{\name}{Rohit Verma}
+\newcommand{\emaila}{rohit.dtu.ac.in@gmail.com}
+\newcommand{\linkedin}{\href{https://linkedin.com/in/rohit-verma-211rv}{LinkedIn}}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{\name}\\[7.5pt]
+
+\linkedin \ $|$ \
+\href{mailto:\emaila}{\raisebox{-0.05\height}\faEnvelope\ \emaila}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+
+\resumeSubheading
+{Infosys SpringBoard 7.0 Virtual Internship}
+{Delhi, India}
+{Python Developer Intern}
+{June 2026 - Present}
+
+\resumeItemListStart
+\item Developing a Global Intellectual Property (IP) Intelligence Platform to monitor patent and trademark activity across global jurisdictions.
+\item Implementing full-stack features across backend and frontend layers, ensuring end-to-end ownership in an agile environment.
+\item Architecting data flow and API integration pipelines to connect IP monitoring services with a responsive frontend interface.
+\resumeItemListEnd
+
+\vspace{-5pt}
+
+
+\resumeSubheading
+{EliteBrokedge Securities}
+{Delhi, India}
+{Web Developer Intern}
+{Jan 2025 - Apr 2025}
+
+\resumeItemListStart
+\item Designed and deployed a MERN-stack application, developing responsive interfaces, RESTful APIs, and robust authentication systems.
+\item Collaborated with a 5-member development team to enhance website functionality and user experience.
+\item Reduced page load time by 25\% and improved user retention by 15\% through performance optimization.
+\resumeItemListEnd
+
+\vspace{-5pt}
+
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+
+\resumeSubheading
+{FundMyStudy: Smart Scholarship Recommendation System}
+{}
+{Tech: React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Google OAuth, ClaudeAPI}
+{}
+
+\resumeItemListStart
+\item Developed an AI-powered full-stack platform recommending 500+ scholarships using eligibility analysis.
+\item Configured 2 recommendation engines with 90\%+ matching accuracy via Node.js/Express.js RESTful APIs.
+\item Automated scholarship discovery, reducing manual search effort by 80\% and improving student access to funding.
+\resumeItemListEnd
+
+\vspace{-5pt}
+
+
+\resumeSubheading
+{HireReady: AI-Powered Resume Preparation Platform}
+{}
+{Tech: React.js, Node.js, Express.js, MongoDB, JWT, Gemini API, Puppeteer}
+{}
+
+\resumeItemListStart
+\item Built and deployed a production-ready Gen AI web application for ATS-optimized resume generation, reducing manual effort by 70\%.
+\item Engineered 8+ secure RESTful API endpoints using Node.js and Express.js with JWT authentication.
+\item Implemented an AI-to-PDF pipeline with Puppeteer for structured, ATS-compatible resume generation.
+\resumeItemListEnd
+
+\vspace{-5pt}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+
+\resumeSubheading
+{Delhi Technological University}
+{}
+{B.Tech, Electrical Engineering; CGPA: 8.72}
+{2024-Present}
+
+
+\resumeSubheading
+{CBSE}
+{}
+{Senior Secondary; CGPA: 90\%}
+{2023}
+
+
+\resumeSubheading
+{CBSE}
+{}
+{Secondary; CGPA: 92.2\%}
+{2021}
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+
+
+\resumeSubItem{Languages}{~~~~~~Python, C++, C, Java, JavaScript, MATLAB
+}
+\resumeSubItem{Frameworks}{~~~~React.js, Node.js, Express.js, Tailwind CSS
+}
+\resumeSubItem{Tools}{~~~~~~~~~~~~Git, GitHub, Visual Studio Code, Docker, Figma, Puppeteer, JWT, Google OAuth, ClaudeAPI, Gemini API
+}
+\resumeSubItem{Platforms}{~~~~~~~MongoDB, MySQL, Google Cloud, Azure DevOps
+}
+\resumeSubItem{Soft Skills}{~~~~~~~Teamwork, Communication, Agile Methodologies, Problem-solving, Leadership, Networking
+}
+
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS / ACHIEVEMENTS / POSITIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+
+\item The Complete Full-Stack Web Development Bootcamp (Udemy, Apr 2026)
+\item Dynamic Programming Camp (AlgoUniversity, Jan 2026)
+\item Mastering Git \& GitHub (Microsoft Learn, Feb 2025)
+
+\section{Achievements}
+
+\item Selected among top students nationwide for the Aspire Leader Program, USA (2025).
+\item Awarded the MEXT Scholarship’25 by the Government of Japan for academic excellence.
+\item Secured 1st Rank in the DSA Quiz organized by SkillOp Society, DTU.
+\item Solved 500+ Data Structures and Algorithms (DSA) problems on Leetcode and GeeksForGeeks.
+
+\section{Positions of Responsibility}
+
+
+\resumeSubheading
+{Co-Head}
+{}
+{SkillOp, DTU}
+{Aug 2024 - Present}
+
+\resumeItemListStart
+\item Spearheaded over 10 successful events, including Techweek, Techfest, and Annual Hackathon, collaborating with a 90-member team.
+\item Managed logistics and cross-team coordination for large-scale events, driving a 30\% growth in participation.
+\resumeItemListEnd
+
+
+
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}

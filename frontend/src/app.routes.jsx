@@ -1,27 +1,62 @@
-import {createBrowserRouter} from "react-router";
-import {Login} from "./features/auth/pages/Login.jsx";
-import {Register} from "./features/auth/pages/Register.jsx";
+import { createBrowserRouter } from "react-router";
+
+import { Login } from "./features/auth/pages/Login.jsx";
+import { Register } from "./features/auth/pages/Register.jsx";
+
 import Protected from "./features/auth/components/Protected.jsx";
-import {Home} from "./features/interview/pages/Home.jsx";
-import {Interview} from "./features/interview/pages/Interview.jsx";
 
-
-
-
+import Home from "./features/interview/pages/Home.jsx";
+import InterviewAnalysis from "./features/interview/pages/InterviewAnalysis.jsx";
+import ResumeBuilder from "./features/interview/pages/ResumeBuilder.jsx";
+import { Interview } from "./features/interview/pages/Interview.jsx";
 
 export const router = createBrowserRouter([
   {
     path: "/login",
-    element: <Login />
+    element: <Login />,
   },
   {
     path: "/register",
-    element: <Register />
-  },{
+    element: <Register />,
+  },
+
+  // Landing Page
+  {
     path: "/",
-    element: <Protected><Home /></Protected>
-  },{
-    path:"/interview",
-    element: <Protected><Interview /></Protected>
-  }
-])
+    element: (
+      <Protected>
+        <Home />
+      </Protected>
+    ),
+  },
+
+  // Interview Analysis Page
+  {
+    path: "/interview-analysis",
+    element: (
+      <Protected>
+        <InterviewAnalysis />
+      </Protected>
+    ),
+  },
+
+  // Interview Report
+  {
+    path: "/interview/:interviewId",
+    element: (
+      <Protected>
+        <Interview />
+      </Protected>
+    ),
+  },
+
+  // Resume Builder
+  {
+    path: "/resume-builder",
+    element: (
+      <Protected>
+        <ResumeBuilder />
+      </Protected>
+    ),
+  },
+]);
