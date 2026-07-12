@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:3000",
+    baseURL: "https://hireready-zvh4.onrender.com",
     withCredentials: true,
 });
 
@@ -11,17 +11,14 @@ export const generateInterviewReport = async ({
     jobDescription,
 }) => {
     const formData = new FormData();
-
     formData.append("resume", resumeFile);
     formData.append("selfDescription", selfDescription);
     formData.append("jobDescription", jobDescription);
-
     const response = await api.post("/api/interview/", formData, {
         headers: {
             "Content-Type": "multipart/form-data",
         },
     });
-
     return response.data;
 };
 
