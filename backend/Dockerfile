@@ -11,6 +11,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 COPY package*.json ./
+
+# Skip Puppeteer's Chromium download — it's an unused dependency in this project
+ENV PUPPETEER_SKIP_DOWNLOAD=true
+
 RUN npm ci --omit=dev
 COPY . .
 
